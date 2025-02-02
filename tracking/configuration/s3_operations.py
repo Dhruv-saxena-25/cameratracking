@@ -43,7 +43,7 @@ class S3Operation:
             return conv_func()
 
         except Exception as e:
-            raise SignException(e, sys) from e
+            raise trackingException(e, sys) from e
 
     def get_bucket(self, bucket_name: str) -> Bucket:
 
@@ -61,7 +61,7 @@ class S3Operation:
             return bucket
 
         except Exception as e:
-            raise SignException(e, sys) from e
+            raise trackingException(e, sys) from e
 
 
     def is_model_present(self, bucket_name: str, s3_model_key: str) -> bool:
@@ -85,7 +85,7 @@ class S3Operation:
                 return False
 
         except Exception as e:
-            raise SignException(e, sys) from e
+            raise trackingException(e, sys) from e
 
     def get_file_object(
         self, filename: str, bucket_name: str
@@ -108,7 +108,7 @@ class S3Operation:
             return file_objs
 
         except Exception as e:
-            raise SignException(e, sys) from e
+            raise trackingException(e, sys) from e
 
     def load_model(
         self, model_name: str, bucket_name: str, model_dir: str = None
@@ -137,7 +137,7 @@ class S3Operation:
             return model
 
         except Exception as e:
-            raise SignException(e, sys) from e
+            raise trackingException(e, sys) from e
 
 
     def create_folder(self, folder_name: str, bucket_name: str) -> None:

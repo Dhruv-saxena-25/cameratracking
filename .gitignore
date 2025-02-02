@@ -31,8 +31,8 @@ venv
 captured_images/
 final_data/
 yolov5
-
-
+artifacts/
+log
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
