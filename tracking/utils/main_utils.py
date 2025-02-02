@@ -15,7 +15,7 @@ def read_yaml_file(file_path: str) -> dict:
             return yaml.safe_load(yaml_file)
 
     except Exception as e:
-        raise SignException(e, sys) from e
+        raise trackingException(e, sys) from e
     
 
 def write_yaml_file(file_path: str, content: object, replace: bool = False) -> None:
@@ -31,7 +31,7 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
             logging.info("Successfully write_yaml_file")
 
     except Exception as e:
-        raise SignException(e, sys)
+        raise trackingException(e, sys)
     
 
 
