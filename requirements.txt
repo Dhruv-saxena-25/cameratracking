@@ -5,3 +5,4 @@ scipy
 jupyter
 ipykernel
 pyserial
+ultralytics
