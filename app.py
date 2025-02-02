@@ -1,11 +1,11 @@
 import sys,os
 import cv2
-from signLanguage.pipeline.training_pipeline import TrainPipeline
-from signLanguage.exception import SignException
-from signLanguage.utils.main_utils import decodeImage, encodeImageIntoBase64
+from tracking.pipeline.training_pipeline import TrainPipeline
+from tracking.exception import trackingException
+from tracking.utils.main_utils import decodeImage, encodeImageIntoBase64
 from flask import Flask, request, jsonify, render_template,Response
 from flask_cors import CORS, cross_origin
-from signLanguage.constant.application import APP_HOST, APP_PORT
+from tracking.constant.application import APP_HOST, APP_PORT
 
 app = Flask(__name__)
 CORS(app)

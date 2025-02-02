@@ -2,7 +2,7 @@ import os,sys
 import yaml
 from tracking.utils.main_utils import read_yaml_file
 from tracking.logger import logging
-from tracking.exception import SignException
+from tracking.exception import trackingException
 from tracking.entity.config_entity import ModelTrainerConfig
 from tracking.entity.artifacts_entity import ModelTrainerArtifact
 

@@ -6,3 +6,9 @@ jupyter
 ipykernel
 pyserial
 ultralytics
+six
+flask-cors
+flask
+from-root
+boto3
+mypy-boto3-s3
