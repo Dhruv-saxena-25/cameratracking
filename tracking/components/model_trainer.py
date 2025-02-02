@@ -21,8 +21,8 @@ class ModelTrainer:
 
         try:
             logging.info("Unzipping data")
-            os.system("unzip tackingData.zip")
-            os.system("rm tackingData.zip")
+            os.system("unzip trackingData.zip")
+            os.system("rm trackingData.zip")
 
             with open("data.yaml", 'r') as stream:
                 num_classes = str(yaml.safe_load(stream)['nc'])
